@@ -1,0 +1,17 @@
+# Ignore local dependencies
+node_modules
+npm-debug.log
+*.log
+
+# Ignore temporary files
+logs.log
+
+
+# Ignore development and editor-specific files
+
+.DS_Store
+.idea
+.vscode
+coverage/
+.git
+.env

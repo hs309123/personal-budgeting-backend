@@ -56,7 +56,7 @@ const configureMiddleware = (server) => {
 
 configureMiddleware(app)
 // health route
-app.get("/health", (req, res) => {
+app.get("/api/health", (req, res) => {
     res.send("Server is healthy!!")
 })
 
