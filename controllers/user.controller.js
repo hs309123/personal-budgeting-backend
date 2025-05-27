@@ -53,7 +53,6 @@ class UserController {
             maxAge: 15 * 24 * 60 * 60 * 1000, // 15 days
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "none"
         })
 
         res.status(201).json(new ApiResponse(201, { token: accessToken }, "User created successfully."))
@@ -94,7 +93,6 @@ class UserController {
             maxAge: 15 * 24 * 60 * 60 * 1000, // 15 days
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "none"
         })
 
         res.status(200).json(new ApiResponse(200, { token: accessToken }, "Login successful."))
@@ -155,7 +153,6 @@ class UserController {
             maxAge: 15 * 24 * 60 * 60 * 1000, // 15 days
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "none"
         })
 
         res.status(200).json(new ApiResponse(200, { token: accessToken }, "Login successful."))
@@ -196,7 +193,6 @@ class UserController {
             maxAge: 5 * 60 * 1000, // 5 min
             httpOnly: true,
             secure: process.env.NODE_ENV === "production",
-            sameSite: "none"
         })
 
         return res.status(200).json(new ApiResponse(200, null, "OTP Sent Successfully"))
@@ -226,7 +222,6 @@ class UserController {
                     maxAge: 5 * 60 * 1000, // 5 min
                     httpOnly: true,
                     secure: process.env.NODE_ENV === "production",
-                    sameSite: "none"
                 })
 
                 return res.status(200).json(new ApiResponse(200, null, "OTP Verified Successfully"))
