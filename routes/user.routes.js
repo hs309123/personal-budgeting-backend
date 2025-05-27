@@ -14,9 +14,9 @@ router.post("/send-mail-otp", userController.sendMailOtp)
 router.post("/verify-email", userController.verifyEmail)
 router.post("/set-password", userController.setPassword)
 
+router.post("/logout", userController.logout)
 router.use(verifyToken)
 
-router.post("/logout", userController.logout)
 router.get("/", userController.getUser)
 
 
